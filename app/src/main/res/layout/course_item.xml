@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+       <TextView
+            android:id="@+id/idTVCourseTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="CourseTitle"
+            android:textColor="@color/purple_500"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/idTVCourseCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="CourseCode"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/idTVClassGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="Class Group"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
