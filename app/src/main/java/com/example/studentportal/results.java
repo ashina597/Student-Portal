@@ -19,6 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.List;
+import java.util.Objects;
 
 public class results extends AppCompatActivity {
 
@@ -79,22 +80,26 @@ public class results extends AppCompatActivity {
                                         title = new TextView(getApplicationContext());
                                         marks = new TextView(getApplicationContext());
                                         grade = new TextView(getApplicationContext());
-                                        code.setText(c.getCourseCode());
-                                        title.setText(c.getCourseTitle());
-                                        marks.setText(c.getMarks());
-                                        grade.setText(c.getGrade());
-                                        code.setTextColor(Color.BLACK);
-                                        title.setTextColor(Color.BLACK);
-                                        marks.setTextColor(Color.BLACK);
-                                        grade.setTextColor(Color.BLACK);
-                                        code.setPadding(20, 20, 20, 20);
-                                        title.setPadding(20, 20, 20, 20);
-                                        marks.setPadding(20, 20, 20, 20);
-                                        grade.setPadding(20, 20, 20, 20);
-                                        tableRow.addView(code);
-                                        tableRow.addView(title);
-                                        tableRow.addView(marks);
-                                        tableRow.addView(grade);
+                                        assert c != null;
+                                        if (!Objects.equals(c.getMarks(), "Not Graded"))
+                                        {
+                                            code.setText(c.getCourseCode());
+                                            title.setText(c.getCourseTitle());
+                                            marks.setText(c.getMarks());
+                                            grade.setText(c.getGrade());
+                                            code.setTextColor(Color.BLACK);
+                                            title.setTextColor(Color.BLACK);
+                                            marks.setTextColor(Color.BLACK);
+                                            grade.setTextColor(Color.BLACK);
+                                            code.setPadding(20, 20, 20, 20);
+                                            title.setPadding(20, 20, 20, 20);
+                                            marks.setPadding(20, 20, 20, 20);
+                                            grade.setPadding(20, 20, 20, 20);
+                                            tableRow.addView(code);
+                                            tableRow.addView(title);
+                                            tableRow.addView(marks);
+                                            tableRow.addView(grade);
+                                        }
                                         tableLayout.addView(tableRow);
 //
                                     }

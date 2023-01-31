@@ -20,6 +20,7 @@ public class courseItem implements Serializable{
         private String courseCode;
         private String classGroup;
         private String reg_no;
+
         public courseItem(String courseTitle, String courseCode, String classGroup, String reg_no) {
             this.courseTitle = courseTitle;
             this.courseCode = courseCode;
