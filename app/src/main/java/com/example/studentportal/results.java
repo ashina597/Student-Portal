@@ -62,7 +62,7 @@ public class results extends AppCompatActivity {
         tableRow.addView(grade);
         tableLayout.addView(tableRow);
 
-                db.collection("Results").whereEqualTo("reg_no", reg_no)
+                db.collection("Registered_courses").whereEqualTo("reg_no", reg_no)
                         .get()
                         .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                             @Override
