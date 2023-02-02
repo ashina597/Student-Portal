@@ -41,8 +41,7 @@ public class CourseDetails extends AppCompatActivity {
         loadingPB = findViewById(R.id.idProgressBar);
         message = findViewById(R.id.text1);
 
-        // initializing our variable for firebase
-        // firestore and getting its instance.
+        // initializing our variable for firebase firestore and getting its instance.
         db = FirebaseFirestore.getInstance();
         Intent i = getIntent();
         String reg_no = i.getStringExtra("reg_no");
@@ -58,9 +57,7 @@ public class CourseDetails extends AppCompatActivity {
         // setting adapter to our recycler view.
         courseRV.setAdapter(courseRVAdapter);
 
-        // below line is use to get the data from Firebase Firestore.
-        // previously we were saving data on a reference of Courses
-        // now we will be getting the data from the same reference.
+        // getting the data from Firebase Firestore.
 
         db.collection("Registered_courses").whereEqualTo("reg_no", reg_no)
                 .get()
